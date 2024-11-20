@@ -6,64 +6,56 @@
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="assets/tools/reset.css">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="assets/tools/testing.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <!--Icons-->
+  <script src="https://kit.fontawesome.com/c101ab7deb.js" crossorigin="anonymous"></script>
+  
   <title>FreeBook</title>
   <script async src="script.js"></script>
 </head>
 <body>
   <header>
-    <img src="assets/images/LogoFreeBook.jpg" alt="Logo de Freebook">
+    <img src="assets/images/LogoFreeBook.png" alt="Logo de Freebook">
     <h1>FreeBook</h1>
     <h2>Cuando aprendes a leer, serás libre para siempre</h2>
 
-<!-- Menu hamburguesa
-
-<div class="respmenu">
+<div class="burger-menu">
   <input type="checkbox">
   <i class="fas fa-bars"></i>
   <i class="fas fa-times"></i>
   <nav>
     <ul>
-      <li><a href="#iniciar-sesion">Iniciar Sesión1</a></li>
+      <li><a href="#iniciar-sesion">Iniciar Sesión</a></li>
       <li><a href="#about">Sobre nosotros</a></li>
       <li><a href="#settings">Configuración</a></li>
       <li><a href="#tutorial">Guia de uso</a></li>
       <li><a href="#cerrar-sesion">Cerrar sesión</a></li>
     </ul>
   </nav>
-</div> 
+</div>
 
--->  
+<div id="bar">
+  <nav id="bar-menu">
+    <button class="bar-menu">Iniciar Sesión js</button>
+    <button class="bar-menu">Sobre nosotros js</button>
+    <button class="bar-menu">Configuración js</button>
+    <button class="bar-menu">Guía de uso js</button>
+    <button class="bar-menu">Cerrar sesión js</button>
+  </nav>
+</div>
 
-
-
-
-    <nav class="burger-link">
-      <a class="burger-item" href="#iniciar-sesion"></a> <!-- ir a formulario de registro-->
-      <a class="burger-item" href="#about"></a> <!-- Ir a sección about-->
-      <a class="burger-item" href="#settings"></a>
-      <a class="burger-item" href="#tutorial"></a>
-      <a class="burger-item" href="#cerrar-sesion"></a> 
-    </nav>
-
-<!-- Menú barra -->
-    <nav class="bar">
-      <button class="bar-item">Iniciar sesión</button>
-      <button class="bar-item">Sobre nosotros</button>
-      <button class="bar-item">Personalizar</button>
-      <button class="bar-item">Tutorial</button>
-      <button class="bar-item">Cerrar sesión</button>
-    </nav>
-<!-- Crear sección buscador para todos igual JS-->
+<!-- Crear sección buscador interno con JS-->
   </header>
+
   <aside>
     <button class="catalogo">Libros electrónicos js</button>
     <button class="catalogo">Audiolibros js</button>    
   </aside>
   <main>
   <!-- Mostrar  3 libros y 3 audiolibros -->
-  <section id="#carrusel">
+  <section id="carrusel">
     <h2>Recomendados del mes</h2>
     <article>
     <figure>
@@ -74,7 +66,7 @@
     </article>
   </section>
 
-  <section id="#beneficios">
+  <section id="beneficios">
     <h2>Beneficios para la comunidad FreeBook</h2>
     <button class="opciones">Descargar libro lleva a registrarse</button>
     <button class="opciones">Marcar Favoritos idem anterior</button>
@@ -83,7 +75,7 @@
 </main>
  
 <!-- Biblioteca -->
-  <section id="#biblioteca">
+  <section id="biblioteca">
     <article class="libro"> <!-- Un article por libro electrónico en la db -->
       <figure>
         <img src="portada del libro" alt="titulo del libro">
@@ -98,12 +90,32 @@
     </article> 
   </section>
 
-  <section id="#about">
+  <section id="about">
     <h2>Sobre nosotros</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi placeat quia est, vitae ipsa tenetur iste sunt obcaecati reprehenderit quam.</p>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, fuga!</p>
     <p>Lorem ipsum dolor sit amet.</p>
    </section>
+
+   <!-- Formulario de contacto -->
+
+   <form action="/my-handling-form-page" method="post">
+    <ul>
+      <li>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="user_name" />
+      </li>
+      <li>
+        <label for="mail">Correo electrónico:</label>
+        <input type="email" id="mail" name="user_mail" />
+      </li>
+      <li>
+        <label for="msg">Mensaje:</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </li>
+    </ul>
+  </form>
+  
   <footer>
     <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><img src="assets/images/by.png" alt="Licencia Creative Commons Atribución"></a>
     <p>Desarrollado por Alicia López - 2024</p>

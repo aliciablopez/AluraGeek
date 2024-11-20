@@ -3,49 +3,45 @@
 
 /*--- Variables CSS ---*/
 :root{
-    --background-gradiente-01:LemonChiffon;
-    --background-gradiente-02: Violet;
-    --background-gradiente-03: HoneyDew;
-    --background-gradiente-04: LightSkyBlue;
-    --border-button: 2px solid black;
-    --color:black;
-    --font-h2: "Josefin Sans", sans-serif 150%;
-    --font-body: "Atkinson Hyperlegible", sans-serif 100%;
-    --font-nota: "Yanone Kaffeesatz", sans-serif 80%;
-    --font-extra: "Sarabun",sans-serif 90%;
-
+--background-body:linear-gradient(to top right,lightcyan, lightskyblue, mistyrose);
+--background-header: linear-gradient(to top right,lightskyblue, mistyrose);
+--background-footer: linear-gradient(to top right,mistyrose, lightskyblue);
+--background-burger-menu: lavenderblush;
 }
+    
 
-/*--- Contenedores --- b*/
+/*--- Contenedores ---*/
 body{
     display: flex;
-    flex-flow: row wrap; /*fila sin desborde*/
-    justify-content: space-between; /* los items dentro del contenedor tienen espaciado auto*/
-    background-color:var(--background-body);
+    flex-flow: row wrap;
+    justify-content: space-between;
     box-sizing: border-box;
     line-height: 1.6;
+    background: var(--background-body);
     width: 100%;
-    height:70%;
+    height:80%;
 }
-header{
 
+header{
+    background: var(--background-header);
+    width: 100%;
+    height:10%;
 }
 footer{
-
+    background: var(--background-footer);
+    width: 100%;
+    height:10%;
 }
-
-/*--- Clases derivadas de etiquetas --- */
-h1.font{
-    font: italic 2rem "Josefin Sans", sans-serif;
+h1{
+    font: italic 3rem "Josefin Sans", sans-serif;
 }
-h2.font{
-   font: normal 1.5rem "Lexend," sans-serif;
-
+h2{
+   font: normal 2rem "Lexend", sans-serif;
 }
-p.font{
+p{
     font: normal 1rem "Atkinson Hyperlegible", sans-serif;
 }
-footer.font{
+footer{
     font: normal 0.75rem "Yanone Kaffeesatz", sans-serif ;
 }
 a{
@@ -84,35 +80,54 @@ figcaption{
 }
 
 /*-- Copiado del tutorial menú hamburguesa*/
-.respmenu a {
+.burger-menu a {
     color: inherit;
     text-decoration: none;
     display: block;
     padding: 10px 20px;
-    border-bottom: 2px solid #456789;
+    border-bottom: 2.5px solid red;
     max-width: 200px;
-    background: #234567;
-    font-variant: small-caps;
+    background:var(--background-burger-menu);
     text-shadow: 1px 1px black;
 }
 
-
-
-
-
-
-.nav__burger-link{
-
+.burger-menu input[type="checkbox"], .burger-menu .fa-bars, .burger-menu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px ;
+    height: 48px;
+  }
+  
+  .burger-menu .fa-bars, .burger-menu .fa-times {
+    font: size 1rem;;
+    pointer-events: none;
+} 
+.burger-menu input[type="checkbox"] {
+    opacity: 0;
+} 
+.burger-menu {
+    color:black;
+    position: relative;
+    background: var(--background-burger-menu);
+    min-height: 48px;
+} 
+.burger-menu nav {
+    display: none;
+}  
+.burger-menu input:checked ~ nav {
+    display: block;
 }
-.nav__burger-item{
-
+.burger-menu input:checked ~ .fa-bars {
+    display: none;
 }
-.nav__bar-link{
-
+.burger-menu input:not(:checked) ~ .fa-times {
+    display: none;
 }
-.nav__bar-item{
 
-}
 .article__libro{
 
 }
@@ -120,6 +135,9 @@ figcaption{
 
 }
 /*--- Identificadores ---*/
+#bar{
+    display: none;
+}
 #carrousel{
 
 }
@@ -130,5 +148,5 @@ figcaption{
 
 }
 #about{
-    
+
 }
