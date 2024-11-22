@@ -4,34 +4,32 @@
 /*--- Variables CSS ---*/
 :root{
 --background-body:linear-gradient(to top right,lightcyan, lightskyblue, mistyrose);
---background-header: linear-gradient(to top right,lightskyblue, mistyrose);
+--background-header: linear-gradient(to top left,lightcyan mistyrose);
 --background-footer: linear-gradient(to top right,mistyrose, lightskyblue);
 --background-menu: lavenderblush;
 --border-color: purple;
+--font-h1: normal 1.5rem "Lexend", sans-serif;
+--font-h2: italic 1.25rem "Josefin", sans-serif;
+--font-p: normal 1rem "Atkinson-Hyperlegible", sans-serif;
 }
-    
-
-/*--- Contenedores ---*/
+/*-- Contenedores principales*/
 body{
     display: flex;
     flex-flow: row wrap;
-    flex-grow: 1;
     justify-content: space-between;
     align-content:space-evenly;
     box-sizing: border-box;
     background: var(--background-body);
+    background-repeat: no-repeat;
     line-height: 1.6;
     width: 100%;
     height:70%;
-    margin-top: 0%;
-    margin-bottom: 0%;
- 
+    margin:0%;
+    padding:0%;
 }
-
 header, footer{
     display: flex;
     flex-flow: row wrap;
-    flex-grow: inherit;
     justify-content: space-between;
     align-content: space-evenly;
     align-items: center;
@@ -43,20 +41,102 @@ header, footer{
     margin-top: 0%;
     padding: 5%;
 }
+h1{
+    font:var(--font-h1);
+}
+h2{
+    font:var(--font-h2)
+}
+p{
+    font: var(--font-p);
+}
+/*-- Estilos items del header*/
+header img{
+    width: 15%;
+    height: fit-content;
+}
+.titular{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width:70%;
+    height: fit-content;
+}
+/*--- Menú hamburguesa ---*/
+/*Contenedor*/
+.burger {
+    color:black;
+    position: relative;
+    width: 15%;
+    height: fit-content;
+} 
+/*Etiquetas <a>*/
+.burger a{
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 0.25rem solid DarkMagenta;    
+    max-width: 200px;
+    background:var(--background-burger);
+    text-shadow: 1px 1px black;
+}
+.burger li{
+    text-decoration: none;
+}
+/* oculta el checkbox con los iconos desplegar y contraer */
+.burger input[type="checkbox"], .burger .fa-bars, .burger .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    right: 0;
+    top: 0;
+
+}
+ 
+/*tamaño y comportamiento de los iconos*/
+.burger .fa-bars, .burger .fa-times {
+    font-size: 2rem;
+    pointer-events: none;
+} 
+/*"oculta" a simple vista el checkbox que hace todo el trabajo de If-Else*/
+.burger input[type="checkbox"] {
+    opacity: 1;
+    font-size: 2rem;
+    margin: 5%;
+    padding: 50%;
+} 
+
+/*Formateo de los contenedores*/
+.burger {
+    color:black;
+    position: relative;
+    background: var(--background-burger);
+    min-height: 2rem;
+} 
+.burger nav {
+    display: none;
+} 
+
+/*usamos el selector de hermanos generales (~) para hacer que cuando el input esta en estado :checked (if positivo), se muestre el nav, y cuando no se encuentra en dicho estado, el menú se oculte. */
+.burger input:checked ~ nav {
+    display: block;
+}
+.burger input:checked ~ .fa-bars {
+    display: none;
+}
+.burger input:not(:checked) ~ .fa-times {
+    display: none;
+}
+
 
 footer img{
     width: fit-content;
     height: fit-content;
 }
-h1{
-    font: italic 3rem "Josefin Sans", sans-serif;
-}
-h2{
-   font: normal 2rem "Lexend", sans-serif;
-}
-p{
-    font: normal 1rem "Atkinson Hyperlegible", sans-serif;
-}
+
 footer{
     font: normal 0.75rem "Yanone Kaffeesatz", sans-serif ;
 }
@@ -96,64 +176,7 @@ figcaption{
 
 }
 
-/*-- Menú hamburguesa ---*/
 
-/* formatea las etiquetas <a> dentro de la clase burger-menu */
-.burger-menu a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 2.5px solid red;
-    max-width: 200px;
-    background:var(--background-burger-menu);
-    text-shadow: 1px 1px black;
-}
-
-/* ubica el checkbox y los iconos fa-bars y fa-times en el mismo sitio */
-.burger-menu input[type="checkbox"], .burger-menu .fa-bars, .burger-menu .fa-times {
-    position: absolute;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-    /*La propiedad right permite desplazar un elemento respecto a su posición original tomando como referencia el borde derecho del elemento
-    Por su propia definición, esta propiedad sólo afecta a los elementos cuya propiedad "position" tenga un valor de "relative", "absolute" o "fixed".*/
-    right: 0;
-    top: 0;
-  }
-  
-/*tamaño y comportamiento de los iconos*/
-.burger-menu .fa-bars, .burger-menu .fa-times {
-    font: size 1rem;;
-    pointer-events: none;
-} 
-/*"oculta" a simple vista el checkbox que hace todo el trabajo de If-Else*/
-.burger-menu input[type="checkbox"] {
-    opacity: 0;
-} 
-
-/*Formateo de los contenedores*/
-.burger-menu {
-    color:black;
-    position: relative;
-    background: var(--background-burger-menu);
-    min-height: 2rem;
-} 
-.burger-menu nav {
-    display: none;
-} 
-
-/*usamos el selector de hermanos generales (~) para hacer que cuando el input esta en estado :checked (if positivo), se muestre el nav, y cuando no se encuentra en dicho estado, el menú se oculte. */
-.burger-menu input:checked ~ nav {
-    display: block;
-}
-.burger-menu input:checked ~ .fa-bars {
-    display: none;
-}
-.burger-menu input:not(:checked) ~ .fa-times {
-    display: none;
-}
 .article__libro{
 
 }
