@@ -1,209 +1,148 @@
 /*--- Tipografias accesibles ---*/
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 /*--- Variables CSS ---*/
 :root{
 --background-body:linear-gradient(to top right,lightcyan, lightskyblue, mistyrose);
 --background-header: linear-gradient(to top left,lightcyan mistyrose);
 --background-footer: linear-gradient(to top right,mistyrose, lightskyblue);
 --background-menu: lavenderblush;
---border-color: purple;
+--border-color: purple; /*accesibilidad dev, se quita en la versión final */
 --font-h1: normal 1.5rem "Lexend", sans-serif;
 --font-h2: italic 1.25rem "Josefin", sans-serif;
+--font-h3: normal 1.25rem "Funnel Sans", sans-serif;
 --font-p: normal 1rem "Atkinson-Hyperlegible", sans-serif;
+
 }
 /*-- Contenedores principales*/
 body{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content:space-evenly;
-    box-sizing: border-box;
-    background: var(--background-body);
-    background-repeat: no-repeat;
-    line-height: 1.6;
-    width: 100%;
-    height:70%;
-    margin:0%;
-    padding:0%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content:space-evenly;
+  box-sizing: border-box;
+  background: var(--background-body);
+  background-repeat: no-repeat;
+  line-height: 1.6;
+  width: 100%;
+  height:70%;
+  margin:0%;
+  padding:0%;
 }
 header, footer{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-content: space-evenly;
-    align-items: center;
-    box-sizing: border-box;
-    border: solid var(--border-color);
-    background: var(--background-header);
-    width: 100%;
-    height: 15%;
-    margin-top: 0%;
-    padding: 5%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  border: solid var(--border-color);
+  background: var(--background-header);
+  width: 100%;
+  height: 15%;
+  margin-top: 0%;
+  padding: 5%;
 }
 h1{
-    font:var(--font-h1);
+  font:var(--font-h1);
 }
 h2{
-    font:var(--font-h2)
+  font:var(--font-h2)
+}
+h3{
+  font:var(--font-h3);
 }
 p{
-    font: var(--font-p);
+  font: var(--font-p);
 }
 /*-- Estilos items del header*/
 header img{
-    width: 15%;
-    height: fit-content;
+  width: 15%;
+  height: fit-content;
 }
 .titular{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width:70%;
-    height: fit-content;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width:70%;
+  height: fit-content;
 }
-/*--- Menú hamburguesa ---*/
+/*--- Menú hamburguesa con HTML y CSS ---*/
 /*Contenedor*/
 .burger {
-    color:black;
-    position: relative;
-    width: 15%;
-    height: fit-content;
+  color:black;
+  position: relative;
+  width: 15%;
+  height: fit-content;
 } 
-/*Etiquetas <a>*/
+/*Opciones>*/
 .burger a{
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 0.25rem solid DarkMagenta;    
-    max-width: 200px;
-    background:var(--background-burger);
-    text-shadow: 1px 1px black;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 0.25rem solid DarkMagenta;    
+  max-width: 200px;
+  background:var(--background-burger);
+  text-shadow: 1px 1px black;
 }
-.burger li{
-    text-decoration: none;
+li{
+  text-decoration: none;
 }
 /* oculta el checkbox con los iconos desplegar y contraer */
 .burger input[type="checkbox"], .burger .fa-bars, .burger .fa-times {
-    position: absolute;
-    box-sizing: border-box;
-    margin: 0%;
-    padding: 0%;
-    right: 0;
-    top: 0;
-
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  right: 0;
+  top: 0;
 }
- 
 /*tamaño y comportamiento de los iconos*/
 .burger .fa-bars, .burger .fa-times {
-    font-size: 2rem;
-    pointer-events: none;
+  font-size: 2rem;
+  pointer-events: none;
 } 
 /*"oculta" a simple vista el checkbox que hace todo el trabajo de If-Else*/
 .burger input[type="checkbox"] {
-    opacity: 1;
-    font-size: 2rem;
-    margin: 5%;
-    padding: 50%;
-} 
-
-/*Formateo de los contenedores*/
-.burger {
-    color:black;
-    position: relative;
-    background: var(--background-burger);
-    min-height: 2rem;
+  opacity: 1;
+  font-size: 2rem;
+  margin: 5%;
+  padding: 50%;
 } 
 .burger nav {
-    display: none;
-} 
-
-/*usamos el selector de hermanos generales (~) para hacer que cuando el input esta en estado :checked (if positivo), se muestre el nav, y cuando no se encuentra en dicho estado, el menú se oculte. */
+  display: none;
+ } 
+/* activar check y unckeck con el selector de hermanos generales */
 .burger input:checked ~ nav {
-    display: block;
+  display: block;
 }
 .burger input:checked ~ .fa-bars {
-    display: none;
+  display: none;
 }
 .burger input:not(:checked) ~ .fa-times {
-    display: none;
+  display: none;
+}
+/*--- Menú con botones, funcionalidad con JS*/
+.bar{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
 }
 
-
 footer img{
-    width: fit-content;
-    height: fit-content;
+  width: 25%;
 }
 
 footer{
-    font: normal 0.75rem "Yanone Kaffeesatz", sans-serif ;
+  font:var(--font-h3);
 }
-a{
 
-}
 nav{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-self: safe;
-
-}
-main{
-
-}
-section{
-
-}
-article{
-
-}
-figure{
-
-}
-figcaption{
-
-}
-/*--- Clases y subclases --- */
-.button__catalogo{
-
-}
-.button_carrusel{
-
-}
-.button_opciones{
-
-}
-
-
-.article__libro{
-
-}
-.article__audio{
-
-}
-/*--- Identificadores ---*/
-#bar{
-    display: none;
-}
-#carrousel{
-
-}
-#beneficios{
-
-}
-#biblioteca{
-
-}
-#about{
-
-}
-#logo{
-    width:20%;
-    height: fit-content;
-}
-#titular{
-    width: 80%;
-    height: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-self: safe;
 }

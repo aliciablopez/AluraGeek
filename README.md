@@ -27,9 +27,9 @@ Diseño IU/UX: completado
 Estructura HTML: completado
 Estilos contenedores CSS: en curso
 Estilos items CSS: en curso
-Botones JS: 
-Formulario de registro: 
-Formulario de contacto: 
+Botones JS: pendiente
+Formulario de registro JS: pendiente
+Formulario de contacto CSS: pendiente
 Carrito de descargas: pendiente
 Historial de lecturas: pendiente
 Historial de descarga: pendiente
