@@ -1,0 +1,91 @@
+*--- Tipografias accesibles ---*/
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lexend:wght@100..900&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/*--- Variables CSS ---*/
+:root{
+--background-body:linear-gradient(to top right,lightcyan, lightskyblue, mistyrose);
+--background-header: linear-gradient(to top left,lightcyan mistyrose);
+--background-footer: linear-gradient(to top right,mistyrose, lightskyblue);
+--background-menu: lavenderblush;
+--border-color: purple; /*accesibilidad dev, se quita en la versión final */
+--font-h1: normal 1.5rem "Lexend", sans-serif;
+--font-h2: italic 1.25rem "Josefin", sans-serif;
+--font-h3: normal 1.25rem "Funnel Sans", sans-serif;
+--font-p: normal 1rem "Atkinson-Hyperlegible", sans-serif;
+}
+/*--- Contenedores con Grid ---*/
+body{
+  background: var(--background-body);
+  background-repeat: no-repeat;
+  line-height: 1.6;
+  width: 100%;
+  height:100%;
+  margin:0%;
+  padding:0%;
+
+
+}
+header{
+  background: var(--background-header);
+  width: 100%;
+  height: 15%;
+  margin-top: 0%;
+  padding: 5%;
+}
+main{
+
+}
+aside{
+
+}
+footer{
+  background-color: var(--background-footer);
+  width: 100%;
+  height: 15%;
+}
+
+/*Propiedades generales para aside, button, burger y bar*/
+aside{
+
+}
+button{
+
+}
+.burger{
+
+}
+.bar{
+
+}
+/*Propiedades especificas DENTRO de la clase genérica*/
+.bar button{
+
+}
+.burger button{
+
+}
+/*Propiedades generales de TODAS las section*/
+section{
+
+}
+/*Propiedades específicas para el id en las section*/
+#carrusel{
+
+}
+#registro{
+
+}
+#about{
+
+}
+#settings{
+
+}
+.libro{
+  /*Al igual que el section, especificar SOLO la clase, ya engloba el Article*/
+  /*Los espacios sirven para ubicar un elemento dentro de otro*/
+
+}
+.beneficios{
+
+}

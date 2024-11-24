@@ -15,90 +15,108 @@
 
 <body>
   <header>
-    <img src="assets/images/LogoFreeBook-0.png" alt="Logo de Freebook con tres libros azules, debajo el lema Una vez que aprendes a leer, serás libre para siempre">
+    <img src="assets/images/logo-freebook.png" alt="Logo de Freebok">
     <div class="titular">
-    <h1>FreeBook</h1>
-    <h2>Cuando aprendes a leer, serás libre para siempre</h2>
-  </div> 
+      <h1>FreeBook</h1>
+      <h2>Cuando aprendes a leer, serás libre para siempre</h2>
+    </div> 
+   <nav class="lista"> <!--Menú desplegable-->
+    <i class="fa-solid fa-bars"></i>
 
-<div class="burger">
-  <input type="checkbox">
-  <i class="fas fa-bars"></i>
-  <i class="fas fa-times"></i>
-  <nav>
     <ul>
-      <li><a href="#iniciar-sesion">Iniciar Sesión</a></li>
-      <li><a href="#about">Sobre nosotros</a></li>
-      <li><a href="#settings">Configuración</a></li>
-      <li><a href="#tutorial">Guia de uso</a></li>
-      <li><a href="#cerrar-sesion">Cerrar sesión</a></li>
+      <li ><a href="#iniciar-sesion">Iniciar Sesión</a></li>
+      <li ><a href="#about">Sobre nosotros</a></li>        <li ><a href="#settings">Configuración</a></li>
+      <li ><a href="#tutorial">Guia de uso</a></li>
+      <li ><a href="#contacto">Contacto</a></li>
+      <li ><a href="#cerrar-sesion">Cerrar sesión</a></li>
     </ul>
   </nav>
-</div>
-<div class="bar">
-  <nav>
-    <button>Iniciar Sesión js</button>
-    <button>Sobre nosotros js</button>
-    <button>Configuración js</button>
-    <button>Guía de usojs</button>
-    <button>Cerrar sesión js</button>
+  <nav class="barra"> <!--Menú en barra horizontal-->
+    <button>Iniciar Sesión</button>
+    <button>Sobre nosotros</button>
+    <button>Guía de uso</button>
+    <button>Contacto</button>
+    <button>Cerrar</button>
   </nav>
-</div>
+</header>
 
-<!-- Crear sección buscador interno con JS-->
-  </header>
-
-  <aside>
-    <button class="catalogo">Libros electrónicos js</button>
-    <button class="catalogo">Audiolibros js</button>    
-  </aside>
-  <main>
-  <!-- Mostrar  3 libros y 3 audiolibros -->
+<main>
+<!-- Carrusel de 5 libros -->
   <section id="carrusel">
     <h2>Recomendados del mes</h2>
-    <article>
-    <figure>
-      <img src="ruta-relativa" alt="">
-      <figcaption>Titulo del libro</figcaption>
-      <button class="carrusel">Leer online</button>
-      </figure>
-    </article>
-  </section>
-
-  <section id="beneficios">
-    <h2>Beneficios para la comunidad FreeBook</h2>
-    <button class="opciones">Descargar libro lleva a registrarse</button>
-    <button class="opciones">Marcar Favoritos idem anterior</button>
-    <button class="opciones">Historial guardar idem anterior</button>
-  </section> 
-</main>
- 
-<!-- Biblioteca -->
-  <section id="biblioteca">
-    <article class="libro"> <!-- Un article por libro electrónico en la db -->
+    <article class="libro">
       <figure>
-        <img src="portada del libro" alt="titulo del libro">
-        <figcaption>
-          <p>Titulo del libro</p>
-          <p>Autor</p>
-          <button>Leer en línea</button>
-          <button>Descargar</button>
+        <img src="ruta-relativa" alt="">
+        <figcaption>Titulo del libro 1</figcaption>
+        <button>Leer online</button>
+        <button>Escuchar</button>
+        <button>Descargar</button>
+        </figure>
+      </article>
+      <article class="libro">
+        <figure>
+          <img src="ruta-relativa" alt="">
+          <figcaption>Titulo del libro 2</figcaption>
+          <button>Leer online </button>
           <button>Escuchar</button>
-        </figcaption>
+          <button>Descargar</button>
+          </figure>
+      </article>
+      <article class="libro">
+        <figure>
+          <img src="ruta-relativa" alt="">
+          <figcaption>Titulo del libro 3</figcaption>
+          <button>Leer online </button>
+          <button>Escuchar</button>          <button>Descargar</button>
+        </figure>
+      </article>
+      <article class="libro">
+        <figure>
+          <img src="ruta-relativa" alt="">
+          <figcaption>Titulo del libro 4</figcaption>
+          <button>Leer online </button>
+          <button>Escuchar</button>
+          <button>Descargar</button>
+        </figure>
+      </article>
+      <article class="libro">
+        <figure>
+          <img src="ruta-relativa" alt="">
+          <figcaption>Titulo del libro 5</figcaption>
+          <button>Leer online </button>
+          <button>Escuchar</button>
+          <button>Descargar</button>
       </figure>
-    </article> 
+      </article>
+    </section>
+  <!-- Botones funcionales -->
+  <section id="oferta">
+    <button>Ebook</button>
+    <button>Audiolibro</button>
+    <!-- buscador en db interna -->
   </section>
 
-  <section id="about">
-    <h2>Sobre nosotros</h2>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi placeat quia est, vitae ipsa tenetur iste sunt obcaecati reprehenderit quam.</p>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, fuga!</p>
-    <p>Lorem ipsum dolor sit amet.</p>
-   </section>
+  <!-- Beneficios -->
+  <aside id="beneficios">
+    <h2>Beneficios para la comunidad FreeBook</h2>
 
-   <!-- Formulario de contacto -->
+    <article>
+      <h3>Usuario registrado</h3>
+      <img src="icono registro" alt="">
+      <p>lorem10</p>
+    </article>
+    <article>
+      <h3>Historial de descargas</h3>
+      <img src="icono historial" alt="">
+      <p>lorem10</p>
+    </article>
+  </aside>
+</main>
+<!-- Catálogo como DB-->
 
-   <form action="/my-handling-form-page" method="post">
+<!-- Formulario de contacto -->
+<section class="contacto">
+  <form action="/my-handling-form-page" method="post">
     <ul>
       <li>
         <label for="name">Nombre:</label>
@@ -114,6 +132,7 @@
       </li>
     </ul>
   </form>
+</section>
   
   <footer>
     <a href="https://creativecommons.org/licenses/by/4.0/deed.es" target="_blank"><img src="assets/images/CC-BY.png" alt="Licencia Creative Commons Atribución"></a>
