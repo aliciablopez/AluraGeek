@@ -1,5 +1,5 @@
 # Descripción del proyecto
-**Objetivo de la aplicación** Desarrollo de una biblioteca digital centrada en la experinecia del usuario respetando sus estrategias adaptativas. 
+**Objetivo de la aplicación** Desarrollo de una biblioteca digital centrada en la experiencia del usuario respetando sus estrategias adaptativas. 
 # Buenas prácticas y accesibilidad
 En esa línea se tuvo en cuenta:
 **Web Semántica**. Utilizar las etiquetas HTML como selectores por defecto en CSS
